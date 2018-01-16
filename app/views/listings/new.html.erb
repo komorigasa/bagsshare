@@ -1,0 +1,69 @@
+<%= render 'partial/navbar' %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<div class="text-center">
+						<span style="font-size:24px;">旅行を登録する</span>
+					</div>
+				</div>
+			
+				<div class="panel-body">			
+
+
+					<!-- ここからフォーム、複数選択ができていない、multipleを調べる、カレンダー入れるのを忘れずに！ -->
+					<%= form_for @listing do |f| %>
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>旅行の種類</label>
+									<%= f.select :travel_type, [["仕事","仕事"], ["グルメ","グルメ"], ["一人旅","一人旅"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>旅行先</label>
+									<%= f.select :travel_country, [["アメリカ","アメリカ"], ["カナダ","カナダ"], ["フランス","フランス"], ["イタリア","イタリア"], ["中国","中国"], ["韓国","韓国"], ["その他","その他"]], {prompt:"選択してください"},  {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>出発空港</label>
+									<%= f.select :departure_port, [["成田空港","成田空港"], ["羽田空港","羽田空港"], ["関西空港","関西空港"], ["その他","その他"]], {prompt:"選択してください"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+
+						<div class="row">
+							<div class="col-md-12 select">
+								<div class="form-group">
+									<label>到着空港</label>
+									<%= f.select :arrival_port, [["成田空港","成田空港"], ["羽田空港","羽田空港"], ["関西空港","関西空港"], ["その他","その他"]], {prompt:"選択してください"},{required: 'true', autofocus: 'true', class: 'form-control'} %>
+								</div>
+							</div>
+						</div>
+						<br>
+
+						<div class="actions">
+							<%= f.submit "Save", class: "btn btn-danger" %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+

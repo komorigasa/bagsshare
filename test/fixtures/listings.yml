@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  travel_type: MyString
+  travel_country: MyString
+  departure_port: MyString
+  arrival_port: MyString
+  address: MyString
+  commodity_prices: 1
+  listing_title: MyString
+  listing_content: MyText
+  active: false
+  user: one
+
+two:
+  travel_type: MyString
+  travel_country: MyString
+  departure_port: MyString
+  arrival_port: MyString
+  address: MyString
+  commodity_prices: 1
+  listing_title: MyString
+  listing_content: MyText
+  active: false
+  user: two
